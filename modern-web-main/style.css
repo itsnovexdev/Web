@@ -1,0 +1,388 @@
+/* ================== Fonts ================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* =============== Global Reset =============== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  font-family: "Roboto", sans-serif;
+}
+
+/* =============== Navbar =============== */
+nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(0, 0, 0);
+  align-items: center;
+  padding: 0 7rem;
+  z-index: 7;
+  border-bottom:  white 1px solid;
+}
+
+.img {
+  width: 70px;
+  padding: 7px;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo span {
+  margin-top: 23px;
+  font-size: 25px;
+  font-weight: bolder;
+  background-image: linear-gradient(to right, #ffffff, #070707);
+  background-clip: text;
+  background-size: 100% 100%;
+  -webkit-text-fill-color: transparent;
+  animation: grad 4s ease infinite;
+  
+}
+
+@keyframes grad {
+  0% {
+    opacity: 1;
+    filter: brightness(200%);
+  }
+  50% {
+    opacity: 0.5;
+    filter: brightness(470%);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(200%);
+  }
+}
+
+.divlinks ul {
+  display: flex;
+  gap: 70px;
+  list-style: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn button {
+  width: 6rem;
+  height: 3rem;
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  background-image: linear-gradient(to right, #565656, #101010);
+  color: white;
+  text-shadow: 0 0 20px white;
+  box-shadow: 0 0 30px 5px rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+/* =============== Hero Section =============== */
+.background {
+  margin: 0;
+  width: 100vw;
+  height: 92.5vh;
+  background-color: #000000;
+  background-image:
+    linear-gradient(0deg, #2a2a2a 1px, transparent 0.2px),
+    linear-gradient(90deg, #2a2a2a 1px, transparent 0.5px);
+  background-size: 80px 80px;
+}
+
+/* =============== Animated Dots =============== */
+.gg1, .gg2, .gg3 {
+  background-image: linear-gradient(to right, #ffffff, #494949);
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px #ffffff70;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  position: relative;
+}
+
+.gg1 {
+  width: 100px;
+  height: 100px;
+  top: -50rem;
+  margin-left: 50px;
+  animation-name: gg1;
+}
+
+@keyframes gg1 {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 50px; }
+}
+
+.gg2 {
+  width: 50px;
+  height: 50px;
+  top: -30rem;
+  left: 39rem;
+  margin-left: 50px;
+  animation-name: gg2;
+  animation-duration: 12s;
+}
+
+@keyframes gg2 {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 25px; }
+}
+
+.gg3 {
+  width: 120px;
+  height: 120px;
+  top: -70rem;
+  left: 100rem;
+  margin-left: 50px;
+  animation-name: gg3;
+  animation-duration: 12s;
+}
+
+@keyframes gg3 {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 30px; }
+}
+
+/* =============== Button Top Banner =============== */
+.btns {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.btn2 {
+  height: 2.2rem;
+  padding: 5px;
+  top: 190px;
+  background-image: linear-gradient(to right, #a6a6a6, #575757, #202020);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 2px #ffffff;
+  text-shadow: 0 0 20px wheat;
+  animation: pip 4s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes pip {
+  0%, 100% { box-shadow: 0 0 20px 2px #f3f3f3; }
+  35% { box-shadow: 0 0 20px 3px #ffffff; }
+  75% { box-shadow: 0 0 30px 4px #ffffff; }
+}
+
+.btn2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255,255,255,0.424) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-40deg);
+  animation: ani 4s ease-in-out infinite;
+}
+
+@keyframes ani {
+  0% { left: -100%; }
+  100% { left: 125%; }
+}
+
+/* =============== Content Text =============== */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background: transparent;
+  position: relative;
+  top: 10rem;
+  margin-top: 10rem;
+  font-size: 40px;
+}
+
+.content p {
+  font-size: 16px;
+  width: 40vw;
+}
+
+.content span {
+  background-image: linear-gradient(to right, #f3f3f3, #5d5d5d);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: tex 4s ease infinite;
+  background-size: 800% 800%;
+  text-shadow: 0 0 10px white;
+}
+
+@keyframes tex {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.5;
+    filter: brightness(100%);
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 1;
+    filter: brightness(130%);
+  }
+}
+
+/* =============== Glowing Circles =============== */
+.glow-text {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow, .glow2, .glow3 {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, #ffffff 0%, transparent 70%);
+  filter: blur(80px);
+  animation: float 10s ease-in-out infinite;
+  z-index: 0;
+}
+
+.glow { top: 23rem; right: 90rem; opacity: 0.5; }
+.glow2 { top: -28rem; left: 30rem; opacity: 0.3; }
+.glow3 { top: -28rem; left: 90rem; opacity: 0.5; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
+}
+
+/* =============== CTA Buttons =============== */
+.Start, .Learn {
+  width: 14vw;
+  height: 6vh;
+  border-radius: 7px;
+  font-size: 17px;
+  font-family: monospace;
+  margin: 25px 20px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 10px white;
+  overflow: hidden;
+}
+
+.Start {
+  border: none;
+  color: white;
+  background-image: linear-gradient(to right, #034cdd, #000b83);
+  box-shadow: 0 0 10px 0 #1706cf;
+  right: 30px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.Start:hover{
+  transform: scale(1.1);
+  transition: 1s;
+  box-shadow: 0 0 20px 10px blue;
+}
+
+.Learn:hover{
+  transform: scale(1.1);
+  transition: 1s;
+  box-shadow: 0 0 20px 10px white;
+}
+
+.Learn {
+  border: 1px solid white;
+  color: white;
+  background-image: linear-gradient(to right, #ffffff, #727272);
+  box-shadow: 0 0 10px 0 #ffffff;
+  right: 10px;
+  color: black;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.Start::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 35px;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-40deg);
+  animation: shine 2s infinite ease-in-out;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 125%; }
+}
+
+.Learn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -35px;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(125deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-40deg);
+  animation: lear 2s ease-in-out infinite;
+}
+
+@keyframes lear {
+  0% { left: -100px; }
+  100% { left: 130%; }
+}
+
+/* =============== Discord Widget =============== */
+.discord {
+  width: 350px;
+  height: 500px;
+  box-shadow: 0 0 20px 10px blue;
+}
+
+.side {
+  
+  display: flex;
+  justify-content: right;
+  margin-right: 10rem;
+  margin-top: -10rem;
+}
+
+
+.novex{
+  width: 16rem;
+  text-shadow: 0 0  20px blue;
+  color: blue;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px 10px blue;
+}
+
+.nov {
+  display: flex;
+  margin-top: 15rem;
+  justify-content: center;
+  align-content: center;
+  margin-left: -2rem;
+  background: red;
+  
+}
+
+
+
+
+
+
+
+
